@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
 				if(arg2 == 2){
 					//Start Multiplication Activity
 					Intent Mult = new Intent(MainActivity.this, Multiplication.class);
-					startActivity(Mult);
+					startActivity(Mult);  
 				}
 			}
 			
