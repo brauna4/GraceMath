@@ -13,7 +13,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class Addition extends Activity {
-
+	
+	int[] corrections = new int[10];
+	String[] problem = new String[10];
+	int[] input = new int[10];
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -22,11 +26,8 @@ public class Addition extends Activity {
 		
 		ListView AdView = (ListView) findViewById(R.id.addList);
 		
-		String[] problem = new String[10];
-		int[] corrections = new int[10];
-		int[] input = new int[10];
+		Random num = new Random();
 		for(int i = 0; i<10; i++){
-			Random num = new Random();
 			int num1 = num.nextInt(20);
 			int num2 = num.nextInt(20);
 			problem[i] = Integer.toString(num1) + " + " + Integer.toString(num2) + " = ";
@@ -43,6 +44,7 @@ public class Addition extends Activity {
 					long arg3) {
 				// TODO Auto-generated method stub
 				Intent addDiag = new Intent(Addition.this, AdditionDiaglogFrag.class);
+				addDiag.putExtra("question", problem[arg2]);
 				startActivityForResult(addDiag, 0);
 			}
 		} );
@@ -53,6 +55,18 @@ public class Addition extends Activity {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 	}
+
+	/*@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}*/
 	
 	
 
