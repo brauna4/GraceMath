@@ -34,7 +34,9 @@ public class Addition extends Activity {
 			corrections[i] = num1 + num2;
 		}
 		
-		ArrayAdapter<String> aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, problem);
+		ArrayAdapter<String> aa = new ArrayAdapter<String>(this, 
+				android.R.layout.simple_list_item_1, problem);
+		
 		AdView.setAdapter(aa);
 		
 		AdView.setOnItemClickListener(new OnItemClickListener() {
