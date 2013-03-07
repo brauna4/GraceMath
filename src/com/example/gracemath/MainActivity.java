@@ -26,24 +26,16 @@ public class MainActivity extends Activity {
 		//Create List View Object graceMenue
 		final ListView graceMenu = (ListView) findViewById(R.id.mylistView);
 		
-		/* Note: I do not need to use the ArrayList object subjects.
-		 * 		 the ArrayAdapter class only needs a string array
-		 * 		 using myString works fine for populating the list
-		 */
-		
-		
-		
-		//Create an ArrayList Object subjects
-		final ArrayList<String> subjects = new ArrayList<String>();
 		//Define and fill a string array with the subjects to chose from
 		final String[] myString = new String[] {"Addition", "Subtraction", "Multiplication"};
-		//Add the subjects to the ArrayList as declared above
-		subjects.addAll(Arrays.asList(myString));
+		
 		//Create an ArrayAdapter object 'aa'
 		final ArrayAdapter<String> aa;
+		
 		//Define the ArrayAdapter Object (Context Context, int, String array)
 		aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
 				myString);
+		
 		//Populates the listView graceMenu with the subjects
 		graceMenu.setAdapter(aa);
 		

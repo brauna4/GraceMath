@@ -32,7 +32,7 @@ public class AdditionDiaglogFrag extends DialogFragment  {
 		FrameLayout fl = (FrameLayout)alert.findViewById(android.R.id.body);
 		fl.addView(inflater.inflate(R.layout.add_dial_layout, fl, false));
 		
-		
+				
 		
 		
 		builder.setTitle(R.string.dialogtitle);
