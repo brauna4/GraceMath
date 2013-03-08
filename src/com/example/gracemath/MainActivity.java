@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
 		//Define the ArrayAdapter Object (Context Context, int, String array)
 		aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
 				myString);
+		
 		//Populates the listView graceMenu with the subjects
 		graceMenu.setAdapter(aa);
 		
